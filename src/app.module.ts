@@ -5,6 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { join } from 'path';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { ArtistsModule } from './artists/artists.module';
+import { AlbumsModule } from './albums/albums.module';
 
 @Module({
   imports: [
@@ -24,6 +25,7 @@ import { ArtistsModule } from './artists/artists.module';
       }),
     }),
     ArtistsModule,
+    AlbumsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
