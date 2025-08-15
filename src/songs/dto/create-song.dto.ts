@@ -1,1 +1,9 @@
-export class CreateSongDto {}
+import { IsString } from "class-validator"
+
+export class CreateSongDto {
+    @IsString()
+    title: string
+
+    
+    duration: number
+}
