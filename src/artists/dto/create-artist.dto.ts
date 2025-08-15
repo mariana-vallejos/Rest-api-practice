@@ -1,4 +1,4 @@
-import { IsString, IsNotEmpty, IsInt, Min, Max } from 'class-validator';
+import { IsString, IsNotEmpty, IsInt, Max } from 'class-validator';
 
 export class CreateArtistDto {
     @IsString()
