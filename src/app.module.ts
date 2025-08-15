@@ -6,6 +6,8 @@ import { join } from 'path';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { ArtistsModule } from './artists/artists.module';
 import { AlbumsModule } from './albums/albums.module';
+import { SongsModule } from './songs/songs.module';
+import { GenresModule } from './genres/genres.module';
 
 @Module({
   imports: [
@@ -26,6 +28,8 @@ import { AlbumsModule } from './albums/albums.module';
     }),
     ArtistsModule,
     AlbumsModule,
+    SongsModule,
+    GenresModule,
   ],
   controllers: [AppController],
   providers: [AppService],

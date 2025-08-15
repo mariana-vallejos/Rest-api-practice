@@ -1,5 +1,6 @@
 import { Artist } from 'src/artists/entities/artist.entity';
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import { Song } from 'src/songs/entities/song.entity';
+import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity({ name: 'albums' })
 export class Album {
@@ -14,4 +15,7 @@ export class Album {
 
   @ManyToOne(() => Artist, (artist) => artist.albums, { onDelete: 'CASCADE' })
   artist: Artist;
+
+  @OneToMany(() => Song, song => song.album)
+  songs: Song[];
 }
